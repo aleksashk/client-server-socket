@@ -22,7 +22,7 @@ public class Server {
                                      socket.getInputStream()))) {
                     String request = reader.readLine();
                     System.out.println("Request: " + request);
-                    String response = "HELLO FROM SERVER: " + request.length();
+                    String response = String.valueOf((int) (Math.random() + 30 - 10));
                     System.out.println("Response: " + response);
                     writer.write(response);
                     writer.newLine();
